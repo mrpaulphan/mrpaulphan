@@ -1,0 +1,12 @@
+.page {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include media('>=large') {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

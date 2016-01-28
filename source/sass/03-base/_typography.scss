@@ -1,0 +1,14 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.longform {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    color: $text;
+    p {
+        color: $text;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "starter",
+  "homepage": "https://github.com/mrpaulphan/starter",
+  "authors": [
+    "MrPaulPhan <paul@mrpaulphan.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize-scss": "normalize.scss#~3.0.3"
+  }
+}
