@@ -13,15 +13,12 @@ return array(
         'tablePrefix' => 'craft',
     ),
     '.dev' => array(
-        'server' => 'localhost',
-        'user' => 'root',
-        'password' => 'root',
-        'database' => 'mrpaulphan_craft',
+        'server' => getenv('DATABASE_HOST'),
+        'user' => getenv('DATABASE_USER'),
+        'password' => getenv('DATABASE_PASS'),
+        'database' => getenv('DATABASE_NAME'),
     ),
     '.com' => array(
-        'server' => 'localhost',
-        'user' => 'drexelba_user',
-        'password' => 'u5PTqUUZwvGl',
-        'database' => 'drexelba_db',
+
     ),
 );

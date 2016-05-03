@@ -1,0 +1,30 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+
+<!-- Projects -->
+<section class="work">
+{% for project in craft.entries.section('projects') %}
+  {% set title = project.title %}
+  {% set featuredImage = project.featuredImage is empty ? "http://placehold.it/400x200" : project.featuredImage  %}
+  <div class="band">
+    <a class="band_inner" href="#">
+
+      <div class="band_content">
+        <h2 class="band_title">{{ title }}</h2>
+        <p class="band_desc"></p>
+      </div>
+
+      <div class="band_image">
+          <img src="{{ featuredImage }}" alt="image" />
+      </div>
+    </a>
+  </div>
+{% endfor %}
+</section>
+
+
+
+
+{% endblock %}

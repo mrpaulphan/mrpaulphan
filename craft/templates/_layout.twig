@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+	<link rel="stylesheet" href="/source/css/screen.css">
+</head>
+<body>
+	{% block content %}
+	{% endblock %}
+<script type="text/javascript" src="/source/js/script.min.js"></script>
+</body>
+</html>

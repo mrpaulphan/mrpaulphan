@@ -1,4 +1,14 @@
 <?php
+require_once('../vendor/autoload.php');
+
+// phpdotenv
+try {
+    $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+    $dotenv->load();
+    $dotenv->required(['DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USER', 'DATABASE_PASS']);
+} catch (Exception $e) {
+    exit('Could not find a .env file.');
+}
 
 // Path to your craft/ folder
 $craftPath = '../craft';
