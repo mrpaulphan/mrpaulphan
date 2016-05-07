@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<section class="hero section">
+<section class="hero hero--home section">
   {% for item in entry.hero %}
   {% switch item.type %}
     {% case "block" %}
@@ -11,7 +11,7 @@
       <div class="hero_content {{ item.position }}">
         <div class="page spacing">
         <h1 class="hero_title alpha--l">{{ item.heading }}</h1>
-        <p class="hero_body gamma">{{ item.body | stripP }}</p>
+        <p class="hero_body--home gamma">{{ item.body | stripP }}</p>
       </div>
     </div>
   {% endswitch %}
@@ -30,12 +30,10 @@
 
   <div class="band" {{ bandImage }}>
     <a class="band_inner page" href="{{ url }}">
-
       <div class="band_content spacing--half">
         <h2 class="band_title beta">{{ title }}</h2>
         <p class="band_desc gamma--s">View Project</p>
       </div>
-
     </a>
   </div>
 {% endfor %}

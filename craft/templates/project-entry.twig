@@ -1,0 +1,62 @@
+{% extends "_layout" %}
+
+{% block content %}
+<section class="hero section">
+    {% for item in entry.hero %}
+    {% switch item.type %}
+      {% case "block" %}
+      {{ (item.image.first is not empty ? '<img class="hero_image" src="'~item.image.first.url~'" alt="'~item.image.first.title~'" />'  : empty) | raw}}
+        <div class="hero_content {{ item.position }}">
+          <div class="page spacing">
+          <h1 class="hero_title alpha--l">{{ item.heading }}</h1>
+          <p class="hero_body gamma">{{ item.body | stripP }}</p>
+        </div>
+      </div>
+    {% endswitch %}
+    {% endfor %}
+</section>
+
+<section class="project section">
+  <div class="page longform">
+    {% for block in entry.bodyEnhanced %}
+      {% switch block.type %}
+
+        {% case "imageBlock" %}
+          <div class="row">
+          {% for image in block.image %}
+            <div class="row_block">
+              <img src="{{ image.url }}" alt="{{ image.title }}" />
+            </div>
+          {% endfor %}
+          </div>
+
+          {% case "bandBlock" %}
+          <div class="row {{ block.position }}">
+            <div class="row_block">
+              <img src="{{ block.image.first.url }}" alt="{{ block.image.first.title }}" />
+            </div>
+            <div class="row_block row_content spacing">
+              <h2 class="alpha">{{ block.heading }}</h2>
+              <h3 class="beta">{{ block.subHeading }}</h3>
+              <p class="gamma">{{ block.text | stripP }}</p>
+              </p>
+            </div>
+          </div>
+
+          {% case "headingBlock" %}
+          <div class="row">
+            <div class="row_content spacing">
+              <h2>{{ block.heading }}</h2>
+              {{ block.subHeading is not empty ? '<h3>'~block.subHeading~'</h3>' : empty }}
+            </div>
+        </div>
+
+
+      {% endswitch %}
+
+
+    {% endfor %}
+
+  </div>
+</section>
+{% endblock %}

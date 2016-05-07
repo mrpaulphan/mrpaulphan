@@ -52,6 +52,49 @@ a {
   color: inherit;
 }
 
+.longform {
+
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+
+.row_layout-c-i {
+  .row_block:first-child {
+    order: 2;
+    width: 50%;
+    padding: 0 5px;
+  }
+  .row_block:last-child {
+    order: 1;
+    width: 50%;
+    padding: 0 5px;
+  }
+}
+
+.row_layout-i-c {
+  .row_block:first-child {
+    order: 1;
+    width: 50%;
+    padding: 0 5px;
+  }
+  .row_block:last-child {
+    order: 2;
+    width: 50%;
+    padding: 0 5px;
+  }
+}
+
+.row_block--split {
+  width: 50%;
+  padding: 0 5px;
+}
 
 .spacing {
   & > * + * {

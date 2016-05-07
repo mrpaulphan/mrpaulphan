@@ -1,11 +1,13 @@
 .hero {
-  background: $blackDark;
   max-height: 500px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 
+}
+.hero--home {
+  background: $blackDark;
 }
 .hero_image {
   display: none;
@@ -24,15 +26,25 @@
   }
   &--left {
     left: 0;
+    text-align: left;
   }
   &--right {
     right: 0;
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+    right: 25%;
+    left: 25%;
+
   }
 }
 .hero_title {
   color: $white;
 }
 .hero_body {
+  color: $white;
+}
+.hero_body--home {
   color: $grayBody;
-
 }
