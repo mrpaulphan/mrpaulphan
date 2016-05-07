@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+  background: $white;
+}
+body,
+html {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+body[data-noscroll='true'] {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+// Remove default fieldset styles.
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+// Clearfix
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+abbr[title] {
+  border-bottom: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.spacing {
+  & > * + * {
+    margin-top: 10px;
+    @include media('>=large') {
+      margin-top: 15px;
+    }
+  }
+}
+
+.spacing--half {
+  & > * + * {
+    margin-top: (10px / 2);
+    @include media('>=large') {
+      margin-top: (15px / 2);
+    }
+  }
+}

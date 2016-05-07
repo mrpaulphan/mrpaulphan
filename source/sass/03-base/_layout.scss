@@ -1,3 +1,6 @@
+.page--header {
+  padding-top: 50px;
+}
 .page {
   width: 100%;
   padding-left: 3%;
@@ -8,5 +11,109 @@
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
+  }
+}
+
+.section {
+  padding: 35px 0;
+  @include media('>=large') {
+  padding: 50px 0;
+  }
+}
+
+body {
+  &:before {
+    display: block;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    right: 0;
+    padding: 0.5em 1em;
+    content: 'No Media Query';
+    color: rgba(255, 255, 255, 0.75);
+    border-top-left-radius: 10px;
+    font-size: 0.75em;
+  }
+}
+// breakpoints
+@media screen and (min-width: 320px) {
+  body:before {
+    content: 'xsmall';
+  }
+  body:before,
+  body:after {
+    background: dodgerblue;
+  }
+}
+@media screen and (min-width: 400px) {
+  body:before {
+    content: 'small';
+  }
+  body:before,
+  body:after {
+    background: darkseagreen;
+  }
+}
+@media screen and (min-width: 500px) {
+  body:before {
+    content: 'medium';
+  }
+  body:before,
+  body:after {
+    background: lightcoral;
+  }
+}
+@media screen and (min-width: 750px) {
+  body:before {
+    content: 'large';
+  }
+  body:before,
+  body:after {
+    background: mediumvioletred;
+  }
+}
+@media screen and (min-width: 850px) {
+  body:before {
+    content: 'mlarge';
+  }
+  body:before,
+  body:after {
+    background: hotpink;
+  }
+}
+@media screen and (min-width: 950px) {
+  body:before {
+    content: 'xlarge';
+  }
+  body:before,
+  body:after {
+    background: orangered;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body:before {
+    content: 'xxlarge';
+  }
+  body:before,
+  body:after {
+    background: dodgerblue;
+  }
+  @media screen and (min-width: 1300px) {
+    body:before {
+      content: 'xxxlarge';
+    }
+    body:before,
+    body:after {
+      background: darkseagreen;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    body:before {
+      content: 'xxxlarge';
+    }
+    body:before,
+    body:after {
+      background: lightcoral;
+    }
   }
 }

@@ -1,7 +1,42 @@
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontRegular;
+}
+
+.alpha {
+  font-family: $fontBold;
+  &--l {
+    font-family: $fontBold;
+    font-size: 24px;
+    @include media('>=large') {
+      font-size: 32px;
+    }
+  }
+}
+
+.beta {
+  font-family: $fontMedium;
+  font-size: 18px;
+  @include media('>=large') {
+    font-size: 22px;
+  }
+}
+
+.gamma {
+  font-family: $fontRegular;
+  font-size: 16px;
+  line-height: 20px;
+  @include media('>=large') {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &--s {
+    font-family: $fontRegular;
     font-size: 14px;
-    color: #000;
+    @include media('>=large') {
+      font-size: 16px;
+    }
+
+  }
 }
 
 .longform {

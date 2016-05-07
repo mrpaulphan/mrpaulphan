@@ -1,0 +1,38 @@
+.hero {
+  background: $blackDark;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+}
+.hero_image {
+  display: none;
+  @include media('>=large') {
+  display: block;
+  width: 100%;
+  }
+}
+.hero_content {
+  width: 100%;
+  @include media('>=large') {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    bottom: 25%;
+  }
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
+.hero_title {
+  color: $white;
+}
+.hero_body {
+  color: $grayBody;
+
+}

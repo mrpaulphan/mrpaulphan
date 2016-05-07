@@ -19,8 +19,14 @@ http://www.MrPaulPhan.com/
 
 // Base
 @import "03-base/fonts";
+@import "03-base/typography";
+@import "03-base/layout";
+@import "03-base/general";
+@import "03-base/icon";
 
 // Modules
+@import "04-modules/header";
+@import "04-modules/hero";
 @import "04-modules/band";
 
 

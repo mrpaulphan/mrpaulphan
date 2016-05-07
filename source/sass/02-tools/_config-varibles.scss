@@ -3,11 +3,15 @@ $white: #fff;
 $black: #000;
 $text: #000;
 
+$blackDark: #1D1D1D;
 $grayPrimary: #f2f2f4;
+$grayBody: #8F8F8F;
+$grayHeading: #4C4C4C;
+//979797
 
 /* Border */
-$greyBorderSmall: 1px solid #ebebeb;
-$grayBorder: #f1f1f1;
+$greyBorderSmall: 1px solid #8F8F8F;
+$grayBorder: #f2f2f4;
 
 /* Size */
 $gutter: 20px;
@@ -16,9 +20,7 @@ $max-width: 1250px;
 $column: 90px;
 $gutter: 10px;
 /* Fonts */
-$fontBlack: "robotoblack", Arial, sans-serif;
-$fontBold: "robotobold", Arial, sans-serif;
-$fontMedium: "robotomedium", Arial, sans-serif;
-$fontRegular: "robotoregular", Arial, sans-serif;
-$fontLight: "robotolight", Arial, sans-serif;
-$fontThin: "robotothin", Arial, sans-serif;
+$fontBold: "Proxima Nova Bold", Arial, sans-serif;
+$fontMedium: "Proxima Nova Semi-Bold", Arial, sans-serif;
+$fontRegular: "Proxima Nova Regular", Arial, sans-serif;
+$fontLight: "Proxima Nova Light", Arial, sans-serif;
