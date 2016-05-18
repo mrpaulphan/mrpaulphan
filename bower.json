@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "normalize-scss": "normalize.scss#~3.0.3"
+    "normalize-scss": "normalize.scss#~3.0.3",
+    "highlight-js": "~9.3.0"
   }
 }

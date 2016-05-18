@@ -1,10 +1,45 @@
 {% extends "_layout" %}
 
 {% block content %}
-  <section class="hero section">
-    <div class="page">
+  <section class="blog section spacing--double">
+    <div class="content">
+      <div class="longform longform_row spacing--half">
+        <h1 class="alpha--xl">{{ entry.title }}</h1>
+        <p class="meta delta--xs">{{ entry.postDate | date("M d, Y") }}</p>
+      </div>
+    </div>
+    {% for block in entry.featuredImage %}
+    {% switch block.type %}
+      {% case "featuredImage" %}
+      {% if block.width == 'full' %}
+        <div class="longform longform_row--full" style="background-image: url('{{ block.photo.first.url }}')">
+        </div>
+        {% else %}
+          <div class="content longform">
+            <div class="longform_row">
+              <img class="" src="{{ block.photo.first.url }}" alt="{{ block.photo.first.title }}" />
+            </div>
+          </div>
+        {% endif %}
+    {% endswitch %}
+    {% endfor %}
+      <div class="content">
+        {% include 'partial/bodyenhanced'%}
+      </div>
+      <div class="content tags">
+        <div class="longform_row">
+          {% for tag in entry.tags %}
+              <a href="#" class="tag delta--xs">{{ tag }}</a>
+          {% endfor %}
+        </div>
 
+      </div>
+  </section>
+  <section class="comments">
+    <div class="content">
+      <div class="longform_row">
+        <div id="disqus_thread"></div>
+      </div>
     </div>
   </section>
-
 {% endblock %}

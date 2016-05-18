@@ -1,5 +1,6 @@
 .work {
   box-shadow: 0 0 30px rgba(0,0,0,.05);
+  height: 100%;
 }
 .band {
   border-bottom: 1px solid $grayBorder;
@@ -7,6 +8,12 @@
   overflow: hidden;
   position: relative;
   transition:  1s ease-in-out;
+  background-size: cover;
+  background-position: center, center;
+  color: $white;
+  height: 100%;
+
+
 
   &:after {
     position: absolute;
@@ -15,17 +22,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f8f8f8;
+    background-color: rgba($primaryBlack, .5);;
     transform-origin: right;
     transition: width 200ms ease-in-out;
     z-index: 1;
   }
   &:hover {
-    .band_title, .band_desc {
-      color: $white;
+    .band_title {
+      opacity: 1;
+    }
+     .band_desc {
+       opacity: 0.8;
+
     }
     &:after {
-      width: 0%;
+      background-color: rgba($primaryBlack, 0);;
     }
   }
 }
@@ -34,12 +45,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 125px;
+  height: 100%;
   text-decoration: none;
   color: inherit;
   z-index: 2;
   @include media('>=large') {
-    min-height: 200px;
+    height: 100%;
+  }
+
+  &--even {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  &--odd {
+    flex-direction: row;
   }
 }
 .band_content {
@@ -49,7 +68,8 @@
   }
 }
 .band_title {
-  color: $grayHeading;
+  color: $white;
+  opacity: .5;
 }
 .band_desc {
   color: rgba($grayHeading, 0.7);

@@ -10,12 +10,13 @@ http://www.MrPaulPhan.com/
 */
 
 // Libraries
-@import "01-libraries/reset";
+@import "bower_components/reset-css/_reset.scss";
 
 // Config
 @import "02-tools/config-varibles";
 @import "02-tools/config-breakpoints";
-
+@import "02-tools/config-breakpoints";
+@import "bower_components/highlightjs/styles/tomorrow-night.scss";
 
 // Base
 @import "03-base/fonts";
@@ -26,9 +27,10 @@ http://www.MrPaulPhan.com/
 
 // Modules
 @import "04-modules/header";
+@import "04-modules/footer";
 @import "04-modules/hero";
 @import "04-modules/band";
-
+@import "04-modules/button";
 
 
 // Priority

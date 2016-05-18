@@ -1,43 +1,44 @@
 .hero {
-  max-height: 500px;
   display: flex;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-
 }
 .hero--home {
-  background: $blackDark;
+  position: relative;
+  height: 100%;
+}
+.hero_content {
+  width: 100%;
+  &--center {
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include media('>=large') {
+    width: 50%;
+
+    &--left {
+      float: left;
+    }
+    &--right {
+      float: right;
+    }
+    &--center {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
 }
 .hero_image {
-  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
   @include media('>=large') {
   display: block;
   width: 100%;
   }
 }
-.hero_content {
-  width: 100%;
-  @include media('>=large') {
-    position: absolute;
-    width: 50%;
-    top: 25%;
-    bottom: 25%;
-  }
-  &--left {
-    left: 0;
-    text-align: left;
-  }
-  &--right {
-    right: 0;
-    text-align: left;
-  }
-  &--center {
-    text-align: center;
-    right: 25%;
-    left: 25%;
 
-  }
+.hero_heading {
+  width: 100%;
 }
 .hero_title {
   color: $white;

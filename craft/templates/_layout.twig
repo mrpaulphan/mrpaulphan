@@ -11,21 +11,21 @@
 	{% set logo = global.logo.first.url %}
 	{% set logoTitle = global.logo.first.title %}
 	{% set tagline = global.siteTagline %}
-	<header>
-		<div class="header page">
+	<header data-nav>
+		<div class="header content">
 			<a class="site " href="{{ siteUrl }}">
 				<img class="site_logo"src="{{ logo }}" alt="{{ logoTitle }}" />
-				<p class="site_tagline gamma">{{ tagline }}</p>
+				<p class="site_tagline delta--xs">{{ tagline }}</p>
 			</a>
 			<nav>
 				<ul class="nav">
 				{% for item in global.navigation %}
 					{% switch item.type %}
 						{% case "entry" %}
-							<li class="nav_list show-at-large"><a class="nav_link" href="{{ item.page.url }}">{{ item.page.text }}</a></li>
+							<li class="nav_list show-at-large"><a class="nav_link delta--xs" href="{{ item.page.url }}">{{ item.page.text }}</a></li>
 					{% endswitch %}
 				{% endfor %}
-				<li class="nav_list show-at-small">
+				<li class="nav_list show-at-small" data-toggle>
 					<svg class="icon_menu" x="0px" y="0px" viewBox="0 0 385 385" style="enable-background:new 0 0 385 385;" xml:space="preserve">
 					<g id="group">
 						<path d="M12,120.3h360.9c6.6,0,12-5.4,12-12c0-6.6-5.4-12-12-12H12c-6.6,0-12,5.4-12,12S5.4,120.3,12,120.3z"/>
@@ -42,7 +42,12 @@
 	{% block content %}
 	{% endblock %}
 	<footer>
-
+		<div class="section--small">
+			<p class="copyright content delta--xs">&copy; {{ now|date('Y')}} Paul Phan | Built with <a href="http://craftcms.com">Craft CMS</a></p>
+			<ul class="show-at-large">
+				<li></li>
+			</ul>
+		</div>
 	</footer>
 	<script type="text/javascript" src="/source/js/script.min.js"></script>
 </body>

@@ -1,0 +1,14 @@
+footer {
+  background-color: $primaryBlack;
+  a {
+    color: $goldDark;
+  }
+}
+
+.copyright {
+  color: $primaryGray;
+  text-align: center;
+  @include media('>=large') {
+    text-align: left;
+  }
+}

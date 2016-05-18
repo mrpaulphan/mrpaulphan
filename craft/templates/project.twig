@@ -1,0 +1,21 @@
+{% extends "_layout" %}
+{% block content %}
+<section class="work">
+  {% for project in entry.featuredWork %}
+  {% set title = project.title %}
+  {% set url = project.url %}
+  {% set featuredImage = project.featuredImage is empty ? "http://placehold.it/400x200" : project.featuredImage  %}
+  {% set bandImage = project.bandImage is empty ? empty : 'style=background-image:url("'~project.bandImage.first.url~'")'   %}
+
+  <div class="band" {{ bandImage }}>
+    <a class="band_inner content {{ loop.index0 is odd ? 'band_inner--even' : 'band_inner--odd'}} container" href="{{ url }}">
+      <div class="band_content spacing--half">
+        <h2 class="band_title beta">{{ title }}</h2>
+        <p class="band_desc gamma--s">{% for tags in project.tags %}<span>{{ tags }}</span>{% endfor %}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+
+</section>
+{% endblock %}

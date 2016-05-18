@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           outputStyle: 'expanded'
-        },
+                },
         files: {
           'public/source/css/screen.css': 'source/sass/screen.scss'
         }
@@ -49,6 +49,9 @@ module.exports = function(grunt) {
         },
         files: {
           'public/source/js/script.min.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/highlightjs/highlight.pack.js',
+            'bower_components/fullpage.js/dist/jquery.fullpage.js',
             // Include:
             'source/js/01-libraries/*.js',
             'source/js/02-plugins/*.js',

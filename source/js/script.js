@@ -6,7 +6,9 @@
 $(document).ready(function() {
 
 
-
+  code();
+    disqus();
+    fixedNav();
 });
 
 /*-------------------------------------------

@@ -1,8 +1,7 @@
 header {
-  background-color: $blackDark;
   padding: 10px 0;
   width: 100%;
-  border-bottom: $greyBorderSmall;
+  background-color: $primaryBlack;
 }
 .header {
   display: flex;
@@ -44,5 +43,8 @@ header {
   padding: 10px 10px;
   text-decoration: none;
   text-transform: uppercase;
-  color: inherit;
+  color: $primaryGray;
+  &:hover {
+    color: $white;
+  }
 }

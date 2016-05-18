@@ -4,12 +4,33 @@ body {
 
 .alpha {
   font-family: $fontBold;
+  &--s {
+    font-family: $fontBold;
+    font-size: 18px;
+    @include media('>=large') {
+      font-size: 20px;
+    }
+  }
+  &--m {
+    font-family: $fontBold;
+    font-size: 22px;
+    @include media('>=large') {
+      font-size: 28px;
+    }
+  }
   &--l {
     font-family: $fontBold;
     font-size: 24px;
     @include media('>=large') {
-      font-size: 32px;
+      font-size: 38px;
     }
+  }
+    &--xl {
+      font-family: $fontBold;
+      font-size: 24px;
+      @include media('>=large') {
+        font-size: 48px;
+      }
   }
 }
 
@@ -22,28 +43,47 @@ body {
 }
 
 .gamma {
-  font-family: $fontRegular;
+  font-family:$fontBody;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 26px;
   @include media('>=large') {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 32px;
+  }
+  &--xs {
+    font-family:$fontBody;
+    font-size: 10px;
+    line-height: 20px;
+
+    @include media('>=large') {
+      font-size: 12px;
+      line-height: 30px;
+    }
   }
   &--s {
+    font-family: $fontBody;
+    font-size: 14px;
+    line-height: 26px;
+    @include media('>=large') {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+  }
+
+
+}
+.delta {
+  font-family: $fontRegular;
+  font-size: 18px;
+  @include media('>=large') {
+    font-size: 22px;
+  }
+  &--xs {
     font-family: $fontRegular;
     font-size: 14px;
     @include media('>=large') {
       font-size: 16px;
     }
-
   }
-}
-
-.longform {
-    margin-top: 20px;
-    padding-bottom: 20px;
-    color: $text;
-    p {
-        color: $text;
-    }
 }
