@@ -17,21 +17,21 @@ add_action('wp_enqueue_scripts', 'assets');
 /*
  * Custom Post type
  */
-add_action( 'init', 'myWork' );
-function myWork() {
+add_action( 'init', 'myProject' );
+function myProject() {
 	$labels = array(
-		'name'               => 'Works',
-		'singular_name'      => 'Work',
-		'menu_name'          => 'Works',
-		'name_admin_bar'     => 'Works',
+		'name'               => 'Projects',
+		'singular_name'      => 'Project',
+		'menu_name'          => 'Projects',
+		'name_admin_bar'     => 'Projects',
 		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Work',
-		'new_item'           => 'New Work',
+		'add_new_item'       => 'Add New Project',
+		'new_item'           => 'New Project',
 		'edit_item'          => 'Edit work',
 		'view_item'          => 'View work',
-		'all_items'          => 'All Works',
-		'search_items'       => 'Search Works',
-		'parent_item_colon'  => 'Parent Works:',
+		'all_items'          => 'All Projects',
+		'search_items'       => 'Search Projects',
+		'parent_item_colon'  => 'Parent Projects:',
 		'not_found'          => 'No works found.',
 		'not_found_in_trash' => 'No works found in Trash.'
 	);
@@ -46,7 +46,7 @@ function myWork() {
 		'taxonomies'		=> array( 'post_tag', 'category' ),
 		'supports'      => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments' )
 	);
-	register_post_type( 'my_recipe', $args );
+	register_post_type( 'projects', $args );
 }
 
 /*
