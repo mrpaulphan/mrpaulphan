@@ -13,6 +13,7 @@ Thumbs.db
 
 # Node Modules
 node_modules/
+bower_components/
 
 /vendor/
 .env
