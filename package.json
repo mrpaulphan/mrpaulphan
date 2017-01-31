@@ -1,0 +1,33 @@
+{
+  "name": "mrpaulphan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpaulphan/mrpaulphan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrpaulphan/mrpaulphan/issues"
+  },
+  "homepage": "https://github.com/mrpaulphan/mrpaulphan#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-directory-sync": "^1.2.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-watch": "^4.3.9",
+    "include-media": "^1.4.8",
+    "jquery": "^3.1.0"
+    }
+}

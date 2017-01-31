@@ -1,0 +1,21 @@
+.project {
+  &__hr {
+    height: 2px;
+    width: 30px;
+    background-color: $white;
+    display: block;
+  }
+  &__date {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  &__title {
+    margin-top: 15px;
+    color: $grayLight;
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 16px;
+    }
+  }
+}

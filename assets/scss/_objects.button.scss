@@ -1,0 +1,75 @@
+.typeform-share {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'soleil', sans-serif;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.11em !important;
+    line-height: 24px !important;
+    text-transform: uppercase !important;
+    background-color: transparent!important;
+    background-image: none;
+    border-radius: 0;
+    color: #fff!important;
+    padding: 7px 13px;
+    border: 2px solid #fff;
+
+    &:hover {
+        background-color: #fff!important;
+        color: #2a385b!important;
+    }
+    &.blue {
+      background-color: #fff!important;
+      color: #2a385b!important;
+      border: 2px solid #2a385b;
+
+      &:hover {
+          background-color: #2a385b!important;
+          color: #fff!important;
+      }
+    }
+
+    &.small {
+        cursor: pointer;
+
+        @include media('>large') {
+            display: none;
+        }
+    }
+
+    &.large {
+        display: none;
+
+        @include media('>large') {
+            display: inline-block;
+        }
+    }
+}
+
+.typeform--small {
+    display: none!important;
+
+    @include media('>large') {
+        display: none!important;
+    }
+
+    .collection-58407f1cff7c50e12916d9d9 & {
+        display: block!important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+}
+
+.footer-wrapper {
+    #block-yui_3_17_2_2_1480618364750_16508 {
+        text-align: center;
+    }
+
+    .typeform-share {
+        text-decoration: none!important;
+    }
+}

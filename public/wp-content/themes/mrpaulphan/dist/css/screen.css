@@ -1,0 +1,127 @@
+body:before {
+  display: block;
+  position: fixed;
+  z-index: 100000;
+  background: black;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  content: 'No Media Query';
+  color: rgba(255, 255, 255, 0.75);
+  border-top-left-radius: 10px;
+  font-size: 0.75em; }
+  @media print {
+    body:before {
+      display: none; } }
+
+body:after {
+  display: block;
+  position: fixed;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  content: '';
+  background: black; }
+  @media print {
+    body:after {
+      display: none; } }
+
+@media (min-width: 18.76em) {
+  body:before {
+    content: 'xsmall: 300px'; }
+  body:after, body:before {
+    background: dodgerblue; } }
+
+@media (min-width: 25.01em) {
+  body:before {
+    content: 'small: 400px'; }
+  body:after, body:before {
+    background: darkseagreen; } }
+
+@media (min-width: 31.26em) {
+  body:before {
+    content: 'medium: 500px'; }
+  body:after, body:before {
+    background: lightcoral; } }
+
+@media (min-width: 46.885em) {
+  body:before {
+    content: 'large: 750px'; }
+  body:after, body:before {
+    background: mediumvioletred; } }
+
+@media (min-width: 53.135em) {
+  body:before {
+    content: 'mlarge: 850px'; }
+  body:after, body:before {
+    background: green; } }
+
+@media (min-width: 59.385em) {
+  body:before {
+    content: 'xlarge: 950px'; }
+  body:after, body:before {
+    background: hotpink; } }
+
+@media (min-width: 68.76em) {
+  body:before {
+    content: 'xxlarge: 1100px'; }
+  body:after, body:before {
+    background: orangered; } }
+
+@media (min-width: 81.26em) {
+  body:before {
+    content: 'xxxlarge: 1300px'; }
+  body:after, body:before {
+    background: dodgerblue; } }
+
+@media (min-width: 92.135em) {
+  body:before {
+    content: 'maxWidth: 1474px'; }
+  body:after, body:before {
+    background: red; } }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+.hide {
+  display: none; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #181818;
+  color: #d0d1d2; }
+
+.project__hr {
+  height: 2px;
+  width: 30px;
+  background-color: #d0d1d2;
+  display: block; }
+
+.project__date {
+  font-size: 10px;
+  margin-bottom: 0; }
+
+.project__title {
+  margin-top: 15px;
+  color: #a4a4a4; }
+  .project__title a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px; }

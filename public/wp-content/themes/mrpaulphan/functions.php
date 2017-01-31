@@ -6,12 +6,13 @@
  */
 function assets()
 {
-    // Load theme css
-  wp_enqueue_style('mrpaulphan_theme_css', get_template_directory_uri().'/dist/screen.css');
+  // Load theme css
+  wp_enqueue_style('mrpaulphan_theme_css', get_template_directory_uri().'/dist/css/screen.css');
 
   // Load them js
-  //wp_enqueue_script( 'mrpaulphan_theme_css', get_template_directory_uri() . '/dist/screen.css');
+  wp_enqueue_script( 'mrpaulphan_theme_js', get_template_directory_uri() . '/dist/js/script.js');
 }
+
 add_action('wp_enqueue_scripts', 'assets');
 
 /*

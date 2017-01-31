@@ -1,0 +1,128 @@
+$breakpoints:(
+    xsmall: ((300 / 16) * 1em),
+    small: ((400 / 16) * 1em),
+    medium: ((500 / 16) * 1em),
+    large: ((750 / 16) * 1em),
+    mlarge: ((850 / 16) * 1em),
+    xlarge: ((950 / 16) * 1em),
+    xxlarge: ((1100 / 16) * 1em),
+    xxxlarge: ((1300 / 16) * 1em),
+    maxWidth: ((1474 / 16) * 1em)
+
+);
+
+@if $showMediaQueryPreview == true {
+    body {
+        &:before {
+            display: block;
+            position: fixed;
+            z-index: 100000;
+            background: black;
+            bottom: 0;
+            right: 0;
+            padding: 0.5em 1em;
+            content: 'No Media Query';
+            color: transparentize(#fff,.25);
+            border-top-left-radius: 10px;
+            font-size: (12/16)+em;
+            @media print {
+                display: none;
+            }
+        }
+        &:after {
+            display: block;
+            position: fixed;
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: (100000-1);
+            content: '';
+            background: black;
+            @media print {
+                display: none;
+            }
+        }
+        @include media('>xsmall') {
+            &:before {
+                content: 'xsmall: 300px';
+            }
+            &:after,
+            &:before {
+                background: dodgerblue;
+            }
+        }
+        @include media('>small') {
+            &:before {
+                content: 'small: 400px';
+            }
+            &:after,
+            &:before {
+                background: darkseagreen;
+            }
+        }
+        @include media('>medium') {
+            &:before {
+                content: 'medium: 500px';
+            }
+            &:after,
+            &:before {
+                background: lightcoral;
+            }
+        }
+        @include media('>large') {
+            &:before {
+                content: 'large: 750px';
+            }
+            &:after,
+            &:before {
+                background: mediumvioletred;
+            }
+        }
+        @include media('>mlarge') {
+            &:before {
+                content: 'mlarge: 850px';
+            }
+            &:after,
+            &:before {
+                background: green;
+            }
+        }
+        @include media('>xlarge') {
+            &:before {
+                content: 'xlarge: 950px';
+            }
+            &:after,
+            &:before {
+                background: hotpink;
+            }
+        }
+        @include media('>xxlarge') {
+            &:before {
+                content: 'xxlarge: 1100px';
+            }
+            &:after,
+            &:before {
+                background: orangered;
+            }
+        }
+        @include media('>xxxlarge') {
+            &:before {
+                content: 'xxxlarge: 1300px';
+            }
+            &:after,
+            &:before {
+                background: dodgerblue;
+            }
+        }
+        @include media('>maxWidth') {
+            &:before {
+                content: 'maxWidth: 1474px';
+            }
+            &:after,
+            &:before {
+                background: red;
+            }
+        }
+    }
+}
